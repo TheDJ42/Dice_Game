@@ -48,7 +48,7 @@ namespace Dice_Game
                 round_number.Text = "Round " + Convert.ToString(round);
                 
                 // Bank score (Add dice together)
-                score = score = round_score;
+                //score = score = round_score;
             }
 
 
