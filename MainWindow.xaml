@@ -12,13 +12,13 @@
 
 
         </Grid.ColumnDefinitions>
-        <Button x:Name="die0" Content="1" HorizontalAlignment="Left" Margin="379,72,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
-        <Button x:Name="die1" Content="1" HorizontalAlignment="Left" Margin="41,72,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
-        <Button x:Name="die2" Content="1" HorizontalAlignment="Left" Margin="157,72,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
-        <Button x:Name="die3" Content="1" HorizontalAlignment="Left" Margin="260,72,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <Button x:Name="die0" Content="1" HorizontalAlignment="Left" Margin="379,72,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="die0_Click"/>
+        <Button x:Name="die1" Content="1" HorizontalAlignment="Left" Margin="41,72,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="die1_Click"/>
+        <Button x:Name="die2" Content="1" HorizontalAlignment="Left" Margin="157,72,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="die2_Click"/>
+        <Button x:Name="die3" Content="1" HorizontalAlignment="Left" Margin="260,72,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="die3_Click"/>
         <TextBlock x:Name="round_number" HorizontalAlignment="Left" Margin="221,20,0,0" TextWrapping="Wrap" Text="Round 1" VerticalAlignment="Top" Width="78" FontWeight="Bold"/>
         <TextBlock x:Name="rolls_left" HorizontalAlignment="Left" Margin="201,169,0,0" TextWrapping="Wrap" Text="Rolls Left this round:" VerticalAlignment="Top" FontSize="9.333"/>
-        <TextBlock x:Name="round_score" HorizontalAlignment="Left" Margin="212,199,0,0" TextWrapping="Wrap" Text="Round Score:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="round_score_text" HorizontalAlignment="Left" Margin="212,199,0,0" TextWrapping="Wrap" Text="Round Score:" VerticalAlignment="Top"/>
         <Button x:Name="new_round" Content="New Round (Bank)" HorizontalAlignment="Left" Margin="194,231,0,0" VerticalAlignment="Top" Width="105" Click="new_round_Click"/>
         <TextBlock x:Name="Score" HorizontalAlignment="Left" Margin="215,281,0,0" TextWrapping="Wrap" Text="Total Score:" VerticalAlignment="Top" Width="67" FontWeight="Bold"/>
 
