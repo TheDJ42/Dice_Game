@@ -20,6 +20,7 @@ namespace Dice_Game
     /// </summary>
     public partial class MainWindow : Window
     {
+        Random RNG =
         int round = 1;
         int score = 0;
         int round_score = 0;
