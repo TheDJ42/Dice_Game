@@ -38,24 +38,34 @@ namespace Dice_Game
         {
             score1 = rnd.Next(1, 7);
             die1.Content = score1.ToString();
+            rolls_left_num--;
+            rolls_left.Text = "Rolls Left this round: " + rolls_left_num.ToString();
         }
 
         private void die2_Click(object sender, RoutedEventArgs e)
         {
             score2 = rnd.Next(1, 7);
             die2.Content = score2.ToString();
+            rolls_left_num--;
+            rolls_left.Text = "Rolls Left this round: " + rolls_left_num.ToString();
+
         }
 
         private void die3_Click(object sender, RoutedEventArgs e)
         {
             score3 = rnd.Next(1, 7);
             die3.Content = score3.ToString();
+            rolls_left_num--;
+            rolls_left.Text = "Rolls Left this round: " + rolls_left_num.ToString();
         }
-
+        
+      
         private void die0_Click(object sender, RoutedEventArgs e)
         {
             score4 = rnd.Next(1, 7);
             die0.Content = score4.ToString();
+            rolls_left_num--;
+            rolls_left.Text = "Rolls Left this round: " + rolls_left_num.ToString();
         }
 
         private void new_round_Click(object sender, RoutedEventArgs e)
