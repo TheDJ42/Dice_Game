@@ -47,7 +47,7 @@ namespace Dice_Game
             die1.Content = die1Val.ToString();
             die2.Content = die2Val.ToString();
             die3.Content = die3Val.ToString();
-
+            
 
         }
         private void die1_Click(object sender, RoutedEventArgs e)
@@ -55,10 +55,13 @@ namespace Dice_Game
             if (rolls_left_num > 0)
 
             {
-                score1 = rnd.Next(1, 7);
-                die1.Content = score1.ToString();
+                die1Val = rnd.Next(1, 7);
+                die1.Content = die1Val.ToString();
                 rolls_left_num--;
                 rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
+                //Update Round Score
+                roundScore = die0Val + die1Val + die2Val + die3Val;
+                roundScore_text.Text = "Round Score: " + roundScore.ToString();
             }
 
 
@@ -69,10 +72,13 @@ namespace Dice_Game
             if (rolls_left_num > 0)
 
             {
-                score2 = rnd.Next(1, 7);
-                die2.Content = score2.ToString();
+                die2Val = rnd.Next(1, 7);
+                die2.Content = die2Val.ToString();
                 rolls_left_num--;
                 rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
+                //Update Round Score
+                roundScore = die0Val + die1Val + die2Val + die3Val;
+                roundScore_text.Text = "Round Score: " + roundScore.ToString();
             }
 
         }
@@ -82,10 +88,13 @@ namespace Dice_Game
             if (rolls_left_num > 0)
 
             {
-                score3 = rnd.Next(1, 7);
-                die3.Content = score3.ToString();
+                die3Val = rnd.Next(1, 7);
+                die3.Content = die3Val.ToString();
                 rolls_left_num--;
                 rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
+                //Update Round Score
+                roundScore =  die0Val + die1Val + die2Val + die3Val;
+                roundScore_text.Text = "Round Score: " + roundScore.ToString();
             }
         }
         
@@ -95,10 +104,13 @@ namespace Dice_Game
             if (rolls_left_num > 0)
 
             {
-                score4 = rnd.Next(1, 7);
-                die0.Content = score4.ToString();
+                die0Val = rnd.Next(1, 7);
+                die0.Content = die0Val.ToString();
                 rolls_left_num--;
                 rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
+                //Update Round Score
+                roundScore = die0Val + die1Val + die2Val + die3Val;
+                roundScore_text.Text = "Round Score: " + roundScore.ToString();
             }
         }
 
@@ -123,7 +135,7 @@ namespace Dice_Game
                 roundNumber.Text = "Round " + Convert.ToString(round);
 
                 // Bank score (Add dice together)
-                roundScore = score1 + score2 + score3 + score4;
+                roundScore = die0Val + die1Val + die2Val + die3Val;
                 roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 totalScore = totalScore + roundScore;
                 score.Text = "Total Score: " + totalScore.ToString();
@@ -138,6 +150,9 @@ namespace Dice_Game
                 die2.Content = die2Val.ToString();
                 die3.Content = die3Val.ToString();
 
+                // Update round score again
+                roundScore = die0Val + die1Val + die2Val + die3Val;
+                roundScore_text.Text = "Round Score: " + roundScore.ToString();
             }
 
 
