@@ -48,6 +48,16 @@ namespace Dice_Game
             die2.Content = die2Val.ToString();
             die3.Content = die3Val.ToString();
             score.Text = "Total Score: " + totalScore.ToString();
+            //Update Round Score
+                if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
+                {
+                    roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
+                }
+                else {
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
+                }
             
 
         }
@@ -64,6 +74,7 @@ namespace Dice_Game
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
                 {
                     roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
                 else {
                     roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
@@ -87,6 +98,7 @@ namespace Dice_Game
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
                 {
                     roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
                 else {
                     roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
@@ -109,6 +121,7 @@ namespace Dice_Game
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
                 {
                     roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
                 else {
                     roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
@@ -131,6 +144,7 @@ namespace Dice_Game
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
                 {
                     roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
                 else {
                     roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
