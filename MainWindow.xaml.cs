@@ -47,6 +47,7 @@ namespace Dice_Game
             die1.Content = die1Val.ToString();
             die2.Content = die2Val.ToString();
             die3.Content = die3Val.ToString();
+            score.Text = "Total Score: " + totalScore.ToString();
             
 
         }
