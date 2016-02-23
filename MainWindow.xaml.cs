@@ -24,10 +24,6 @@ namespace Dice_Game
         int round = 1;
         int totalScore = 0;
         int roundScore = 0;
-        int score1 = 0;       
-        int score2 = 0;       
-        int score3 = 0;       
-        int score4 = 0;
         int rolls_left_num = 5;
         int die0Val = 0;
         int die1Val = 0;
