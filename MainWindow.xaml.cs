@@ -57,13 +57,14 @@ namespace Dice_Game
             
 
         }
-        private void die1_Click(object sender, RoutedEventArgs e)
+
+        private void DiceClick(Button btn, val)
         {
             if (rolls_left_num > 0)
 
             {
-                die1Val = rnd.Next(1, 7);
-                die1.Content = die1Val.ToString();
+                val = rnd.Next(1, 7);
+                btn.Content = die1Val.ToString();
                 rolls_left_num--;
                 rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
                 //Update Round Score
@@ -77,76 +78,31 @@ namespace Dice_Game
                     roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
             }
+        }
 
+        private void die1_Click(object sender, RoutedEventArgs e)
+        {
+
+            DiceClick(die1, die1Val);
 
         }
 
         private void die2_Click(object sender, RoutedEventArgs e)
         {
-            if (rolls_left_num > 0)
 
-            {
-                die2Val = rnd.Next(1, 7);
-                die2.Content = die2Val.ToString();
-                rolls_left_num--;
-                rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
-                //Update Round Score
-                if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
-                {
-                    roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
-                }
-                else {
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
-                }
-            }
+            DiceClick(die2, die2Val);
 
         }
 
         private void die3_Click(object sender, RoutedEventArgs e)
         {
-            if (rolls_left_num > 0)
-
-            {
-                die3Val = rnd.Next(1, 7);
-                die3.Content = die3Val.ToString();
-                rolls_left_num--;
-                rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
-                //Update Round Score
-                if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
-                {
-                    roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
-                }
-                else {
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
-                }
-            }
+            DiceClick(die3, die3Val);
         }
         
       
         private void die0_Click(object sender, RoutedEventArgs e)
         {
-            if (rolls_left_num > 0)
-
-            {
-                die0Val = rnd.Next(1, 7);
-                die0.Content = die0Val.ToString();
-                rolls_left_num--;
-                rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
-                //Update Round Score
-                if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
-                {
-                    roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
-                }
-                else {
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
-                }
-            }
+            DiceClick(die0, die0Val);
         }
 
         private void new_round_Click(object sender, RoutedEventArgs e)
