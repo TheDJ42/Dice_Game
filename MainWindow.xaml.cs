@@ -25,10 +25,7 @@ namespace Dice_Game
         int totalScore = 0;
         int roundScore = 0;
         int rolls_left_num = 5;
-        int die0Val = 0;
-        int die1Val = 0;
-        int die2Val = 0;
-        int die3Val = 0;
+        
 
 
         public MainWindow()
@@ -58,23 +55,29 @@ namespace Dice_Game
 
         }
 
-        private void DiceClick(Button btn, val)
+        private void DiceClick(Button btn)
         {
             if (rolls_left_num > 0)
 
             {
-                val = rnd.Next(1, 7);
-                btn.Content = die1Val.ToString();
+                int val = rnd.Next(1, 7);
+                btn.Content = val.ToString();
                 rolls_left_num--;
                 rollsLeft.Text = "Rolls Left this round: " + rolls_left_num.ToString();
                 //Update Round Score
+                btn.Tag = val;
+                int die0Val = (int)die1.Tag;
+                int die1Val = (int)die2.Tag;
+                int die2Val = (int)die3.Tag;
+                int die3Val = (int)die0.Tag;
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
                 {
                     roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
                     roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
                 else {
-                    roundScore_text.Text = "Round Score: " + roundScore.ToString(); roundScore = die0Val + die1Val + die2Val + die3Val;
+                    roundScore_text.Text = "Round Score: " + roundScore.ToString();
+                    roundScore = die0Val + die1Val + die2Val + die3Val;
                     roundScore_text.Text = "Round Score: " + roundScore.ToString();
                 }
             }
@@ -83,26 +86,26 @@ namespace Dice_Game
         private void die1_Click(object sender, RoutedEventArgs e)
         {
 
-            DiceClick(die1, die1Val);
+            DiceClick(die1);
 
         }
 
         private void die2_Click(object sender, RoutedEventArgs e)
         {
 
-            DiceClick(die2, die2Val);
+            DiceClick(die2);
 
         }
 
         private void die3_Click(object sender, RoutedEventArgs e)
         {
-            DiceClick(die3, die3Val);
+            DiceClick(die3);
         }
         
       
         private void die0_Click(object sender, RoutedEventArgs e)
         {
-            DiceClick(die0, die0Val);
+            DiceClick(die0);
         }
 
         private void new_round_Click(object sender, RoutedEventArgs e)
@@ -126,6 +129,10 @@ namespace Dice_Game
                 roundNumber.Text = "Round " + Convert.ToString(round);
 
                 // Bank score (Add dice together)
+                int die0Val = (int)die1.Tag;
+                int die1Val = (int)die2.Tag;
+                int die2Val = (int)die3.Tag;
+                int die3Val = (int)die0.Tag;
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
                 {
                     roundScore = (die0Val + die1Val + die2Val + die3Val) * 5;
@@ -146,9 +153,13 @@ namespace Dice_Game
                 die2Val = rnd.Next(1, 7);
                 die3Val = rnd.Next(1, 7);
                 die0.Content = die0Val.ToString();
+                die0.Tag = die0Val;
                 die1.Content = die1Val.ToString();
+                die1.Tag = die1Val;
                 die2.Content = die2Val.ToString();
+                die2.Tag = die2Val;
                 die3.Content = die3Val.ToString();
+                die3.Tag = die3Val;
 
                 // Update round score again
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
