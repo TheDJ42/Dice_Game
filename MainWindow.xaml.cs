@@ -32,14 +32,23 @@ namespace Dice_Game
         {
             
             InitializeComponent();
+            int die0Val = (int)die1.Tag;
+            int die1Val = (int)die2.Tag;
+            int die2Val = (int)die3.Tag;
+            int die3Val = (int)die0.Tag;
+            //Roll the Dice
             die0Val = rnd.Next(1, 7);
             die1Val = rnd.Next(1, 7);
             die2Val = rnd.Next(1, 7);
             die3Val = rnd.Next(1, 7);
             die0.Content = die0Val.ToString();
+            die0.Tag = die0Val;
             die1.Content = die1Val.ToString();
+            die1.Tag = die1Val;
             die2.Content = die2Val.ToString();
+            die2.Tag = die2Val;
             die3.Content = die3Val.ToString();
+            die3.Tag = die3Val;
             score.Text = "Total Score: " + totalScore.ToString();
             //Update Round Score
                 if (die0Val == die1Val && die1Val == die2Val && die2Val == die3Val)
