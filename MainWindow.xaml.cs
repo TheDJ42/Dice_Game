@@ -32,15 +32,17 @@ namespace Dice_Game
         {
             
             InitializeComponent();
-            int die0Val = (int)die1.Tag;
-            int die1Val = (int)die2.Tag;
-            int die2Val = (int)die3.Tag;
-            int die3Val = (int)die0.Tag;
+            int die0Val;
+            int die1Val;
+            int die2Val;
+            int die3Val;
+
             //Roll the Dice
             die0Val = rnd.Next(1, 7);
             die1Val = rnd.Next(1, 7);
             die2Val = rnd.Next(1, 7);
             die3Val = rnd.Next(1, 7);
+
             die0.Content = die0Val.ToString();
             die0.Tag = die0Val;
             die1.Content = die1Val.ToString();
